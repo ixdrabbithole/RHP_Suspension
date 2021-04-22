@@ -1,0 +1,228 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("background.jpg");
+    color: #2a2a2a;
+}
+
+@font-face {
+    font-family: "SF";
+    src: url('fonts/SFProDisplay.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF-UI";
+    src: url('fonts/SF-UI-Display-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF-UI-Display-Semibold";
+    src: url('fonts/SF-UI-Display-Semibold.otf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF-UI-Display-Thin";
+    src: url('fonts/sf-ui-display-thin-58646e9b26e8b.otf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mariposa-Medium";
+    src: url('fonts/mariposa_med.otf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mariposa-Book";
+    src: url('fonts/mariposa_book.otf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mariposa-Black";
+    src: url('fonts/mariposa_black.otf') format('truetype');
+    font-style: normal;
+}
+.loading-screen {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: #2d32b4;
+    width: 0%;
+    height: 100%;
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+
+h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "SF";
+    font-size: 40px;
+}
+
+h2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Mariposa-Black";
+    font-weight: 900;
+    font-size: 90px;
+}
+
+h3 {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "SF-UI-Display-Thin";
+    font-weight: 300;
+    font-size: 38px
+}
+
+h4{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "SF-UI-Display-Thin";
+    font-weight: 100;
+    font-size: 20px
+}
+
+.button {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button a {
+    font-family: "Mariposa-Medium";
+    font-weight: 200;
+    text-decoration: none;
+    color: #2a2a2a;
+    border: 1px solid #2a2a2a;
+    border-radius: 15px;
+    padding: 24px 100px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.button:hover a {
+    background: #2a2a2a;
+    color: white;
+    transition: 0.3s;
+}
+
+.line {
+    position: relative;
+    top: 40%;
+    width: 16em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 90%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/*Animation*/
+
+.anim-typewriter {
+    animation: typewriter 4s steps(30) 1s 1 normal both,
+        blinkTextCursor 500ms steps(30) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 11.5em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: #2a2a2a;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.pace {
+    pointer-events: none;
+    user-select: none;
+    z-index: 2000;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    border: 0px;
+    height: 1px;
+    overflow: hidden;
+    background: #1b1b1b;
+}
+
+.pace .pace-progress {
+    box-sizing: border-box;
+    transform: translate3d(0, 0, 0);
+    max-width: 400px;
+    position: fixed;
+    z-index: 2000;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background: grey;
+}
+
+.pace.pace-inactive {
+    display: none;
+}
+
+#preloader {
+    width: 100%;
+    height: 100vh;
+    background: #101010;
+    overflow: hidden;
+    position: fixed;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
